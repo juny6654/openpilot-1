@@ -306,11 +306,6 @@ class CarInterface(CarInterfaceBase):
     ret.steerMaxBP = [0.]
     ret.steerMaxV = [1.5]
 
-    ret.stopAccel = -2.5
-    ret.stoppingDecelRate = 0.3  # brake_travel/s while trying to stop
-
-    ret.stoppingControl = True
-
     # ignore CAN2 address if L-CAN on the same BUS
     ret.mdpsBus = 1 if 593 in fingerprint[1] and 1296 not in fingerprint[1] else 0
     ret.sasBus = 1 if 688 in fingerprint[1] and 1296 not in fingerprint[1] else 0
